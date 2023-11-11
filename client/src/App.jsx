@@ -1,15 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import {BrowserRouter,Route,Routes}  from 'react-router-dom'
+
+import Products from './pages/products'
+import Profile from './pages/Profile'
+import Orders from './pages/Orders'
+import Transactions from './pages/Transactions'
+import Settings from './pages/Settings'
+import Dashboard from './pages/Dashboard'
+
+
+
 
 function App() {
 
   return (
     <>
-      <h1>Hello world</h1>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/Dashboard' element={<Dashboard />}>
+          <Route index  path='products' element={<Products />} />
+          <Route path='orders' element={<Orders />} />
+          <Route path='transactions'  element={<Transactions />} />
+          <Route path='profile' element={<Profile />}/>
+          <Route path='settings' element={<Settings />}/>
+         
+          <Route  />
+
+        </Route>
+      </Routes>
+      </BrowserRouter>
     </>
   )
 }
 
 export default App
+
