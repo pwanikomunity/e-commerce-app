@@ -122,7 +122,7 @@ export const Login = () => {
           </div>
           <div className="w-[100%] h-[3rem] mt-[1rem]">
             {" "}
-            <button onClick={login} className="btn-primary">
+            <button onClick={login} className="btn-primary shadow">
               {" "}
               Continue
             </button>
