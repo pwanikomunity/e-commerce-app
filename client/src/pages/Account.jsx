@@ -1,10 +1,11 @@
 import React from 'react'
 import { Login } from '../Components/Auth/Login'
 
-export default function Settings() {
+export const Account = () => {
   return (
     <div>
-      <Login/>
+        <Login/>
     </div>
+    
   )
 }

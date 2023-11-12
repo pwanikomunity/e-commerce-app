@@ -7,6 +7,7 @@ import Orders from './pages/Orders'
 import Transactions from './pages/Transactions'
 import Settings from './pages/Settings'
 import Dashboard from './pages/Dashboard'
+import { Account } from './pages/Account'
 
 
 
@@ -23,6 +24,9 @@ function App() {
           <Route path='transactions'  element={<Transactions />} />
           <Route path='profile' element={<Profile />}/>
           <Route path='settings' element={<Settings />}/>
+          
+          
+          
          
           <Route  />
 

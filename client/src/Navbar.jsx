@@ -25,6 +25,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
+
     <div className="">
       <div className="">
         <ul className="h-screen w-[7rem] border-r shadow-2xl fixed mt-[4rem] flex flex-col space-y-[4rem] ">
