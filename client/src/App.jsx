@@ -8,6 +8,7 @@ import Transactions from './pages/Transactions'
 import Settings from './pages/Settings'
 import Dashboard from './pages/Dashboard'
 import { Account } from './pages/Account'
+import { Login } from './Components/Auth/Login'
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
+        <Route path='/' element={<Login  />} />
         <Route path='/Dashboard' element={<Dashboard />}>
           <Route index  path='products' element={<Products />} />
           <Route path='orders' element={<Orders />} />
