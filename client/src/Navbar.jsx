@@ -16,6 +16,7 @@ export default function Navbar() {
             <li className='m-3 w-[3.4rem] ml-5 h-[3.4rem] '><NavLink to='transactions'>Transactions</NavLink></li>
             <li className='m-3 w-[3.4rem] ml-5 h-[3.4rem] '><NavLink to='profile'>Profile</NavLink></li>
             <li className='m-3 w-[3.4rem] ml-5 h-[3.4rem] '><NavLink to='settings'>Settings</NavLink></li>
+
         </ul>
     </div>
     <div>
