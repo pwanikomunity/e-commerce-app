@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 
 import { auth, googleProvider } from "./Firebase.jsx";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -85,12 +86,13 @@ export const Login = () => {
       <div className="h-screen flex flex-col items-center justify-center space-y-[1rem]">
         <div>
           <h1 className="font-bold text-center text-2xl ">Welcome to e-cormmerce</h1>
-          <p className="">To get started type your email address or create  an e-commerce account</p>
+          <p className="">To get started type your email address or <span><Link className="hover:underline">create  an e-commerce account</Link> </span></p>
         </div>
         <div className="flex flex-col w-[30%]">
           <div className="w-[100%]">
-            <label>Email</label>
+            <label className="font-bold text-2xl">Email</label>
           </div>
+
           <div>
             {" "}
             <input
@@ -105,7 +107,7 @@ export const Login = () => {
         </div>
         <div className="flex flex-col w-[30%]">
           <div className="w-[100%]">
-            <label >Password</label>
+            <label  className="font-bold text-2xl">Password</label>
           </div>
           <div>
             {" "}
@@ -120,7 +122,7 @@ export const Login = () => {
           </div>
           <div className="w-[100%] h-[3rem] mt-[1rem]">
             {" "}
-            <button onClick={login} className="w-[100%] h-[100%] rounded text-white bg-yellow-900">
+            <button onClick={login} className="btn-primary">
               {" "}
               Continue
             </button>
