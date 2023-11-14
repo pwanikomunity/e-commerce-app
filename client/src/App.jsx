@@ -1,7 +1,7 @@
 
 import {BrowserRouter,Route,Routes}  from 'react-router-dom'
 
-import Products from './pages/products'
+import Products from './pages/Products'
 import Profile from './pages/Profile'
 import Orders from './pages/Orders'
 import Transactions from './pages/Transactions'
