@@ -38,7 +38,7 @@ export default function Navbar() {
               </div>
             );
           })}
-          <li className="flex-grow mt-auto m-3 flex-grow w-[3.4rem] ml-5 h-[3.4rem]">
+          <li className="flex-grow mt-auto m-3 w-[3.4rem] ml-5 h-[3.4rem]">
             <NavLink to={navLinks[navLinks.length - 1].path}>
               {navLinks[navLinks.length - 1].title}
             </NavLink>

@@ -1,7 +1,7 @@
 
 import {BrowserRouter,Route,Routes}  from 'react-router-dom'
 
-import Products from './pages/products'
+
 import Profile from './pages/Profile'
 import Orders from './pages/Orders'
 import Transactions from './pages/Transactions'
@@ -9,6 +9,7 @@ import Settings from './pages/Settings'
 import Dashboard from './pages/Dashboard'
 import { Account } from './pages/Account'
 import { Login } from './Components/Auth/Login'
+import Products from './pages/products'
 
 
 
