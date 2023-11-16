@@ -22,11 +22,11 @@ export const Productsdata = () => {
     <div className='flex h-[3rem] w-[50%] border border-yellow-900 mb-[1rem]'>
       <input className='w-[100%] h-[100%] text-center' placeholder='search products'/>
 
-    </div>
+    </div>  
     </section>
 
 
-    <div className=" flex justify-between mt-[1rem] mb-[1rem] pl-[8rem] pr-[8rem]">
+    <div className=" flex justify-between mt-[1rem] mb-[1rem] pl-[8rem] pr-[8rem] ">
             <button className=' btn-primary w-[5rem] ml-[2rem]' onClick={() => setData(Categories)}>All</button><br />
             <button className=' btn-primary  w-[5rem] ml-[2rem]' onClick={() => filterItems('Men')}>Men</button><br />
             <button className=' btn-primary  w-[5rem] ml-[2rem]' onClick={() => filterItems('women')}>Women</button><br />
@@ -37,20 +37,20 @@ export const Productsdata = () => {
             <button className=' btn-primary  w-[5rem] ml-[2rem]' onClick={() => filterItems('Sportswear')}>Sports </button><br />
           </div>
         
-      <div className='p-[8rem]'>
+      <div className=''>
         <div className=" flex ">
           
 
-          <div className="">
+          <div className="mt-[1rem]">
           
-            <div className=" flex justify-between flex-wrap ">
+            <div className=" flex  flex-wrap space-x-[1rem] ">
               {data.map((values) => {
                 const { id, title, price, about, image } = values;
                 return (
                   
                     <div className="   ">
                       <div className="" key={id}>
-                        <div className="rounded border shadow-md hover:scale-105 transition-transform duration-300 ease-in-out ml-10 mb-20 p-1">
+                        <div className=" rounded border shadow-md hover:scale-105 transition-transform duration-300 ease-in-out  mb-20 p-1">
                           <div className='w-[15rem] h-[15rem]'>
                           <img  className='w-[100%] h-[100%] object-cover' src={image} />
                           </div>
