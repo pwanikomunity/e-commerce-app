@@ -17,7 +17,7 @@ const interval = 3000; // Change this value to adjust the interval
     
       </section>
       
-      <Carousel autoPlay infiniteLoop interval={interval} showArrows={false} showStatus={false} showThumbs={false} className='w-[50%] pb-[1rem]'>
+      <Carousel autoPlay infiniteLoop interval={interval} showArrows={false} showStatus={false} showThumbs={false} className='w-[50%] pb-[2rem]'>
       {Categories.slice(0,5).map((product, index) => (
         <div key={index} className="w-[100%] h-[50vh]  flex items-center justify-center">
           <img src={product.image} alt={product.title} className="object-cover w-[100%] h-[100%]" />
