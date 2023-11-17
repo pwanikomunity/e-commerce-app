@@ -10,6 +10,8 @@ import Dashboard from './pages/Dashboard'
 import { Account } from './pages/Account'
 import { Login } from './Components/Auth/Login'
 import Products from './pages/products'
+import Header from './components/header'
+import Home from './pages/Home'
 
 
 
@@ -19,8 +21,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      
       <Routes>
-        <Route path='/' element={<Login  />} />
+      <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login  />} />
         <Route path='/Dashboard' element={<Dashboard />}>
           <Route index  path='products' element={<Products />} />
           <Route path='orders' element={<Orders />} />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Categories from './Categories'
 import './Categories.css'
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+
 import { green } from '@mui/material/colors';
 
 export const Productsdata = () => {
@@ -17,12 +17,9 @@ export const Productsdata = () => {
 
     <section className='ml-[25%] flex space-x-[1rem]'>
     <div className='border h-[3rem] p-[0.5rem]'>
-   < MenuOutlinedIcon fontSize="large"  />
+  
     </div>
-    <div className='flex h-[3rem] w-[50%] border border-yellow-900 mb-[1rem]'>
-      <input className='w-[100%] h-[100%] text-center' placeholder='search products'/>
-
-    </div>  
+     
     </section>
 
 
