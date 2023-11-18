@@ -21,6 +21,10 @@ const navLinks = [
     title: "Sporting goods",
     path: "settings",
   },
+  {
+    title: "Cart",
+    path: "shopping",
+  },
 ];
 
 export default function Navbar() {
