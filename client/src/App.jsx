@@ -6,7 +6,8 @@ import Settings from './pages/Settings'
 import Dashboard from './pages/Dashboard'
 import { Login } from './Components/Auth/Login'
 import Products from './pages/products'
-import { Orders } from './pages/Orders'
+import Header from './components/header'
+import Home from './pages/Home'
 
 const App=()=>{
 
@@ -15,8 +16,10 @@ const App=()=>{
     
     
       <BrowserRouter>
+      
       <Routes>
-        <Route path='/' element={<Login  />} />
+      <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login  />} />
         <Route path='/Dashboard' element={<Dashboard />}>
           <Route index  path='products' element={<Products />} />
           <Route path='orders' element={<Orders />} />

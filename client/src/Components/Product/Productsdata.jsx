@@ -1,8 +1,12 @@
 import React, { useContext, useState } from 'react'
 import Categories from './Categories'
 import './Categories.css'
+
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { ShopContext } from '../../Context/Cart-context';
+
+
+
 
 export const Productsdata = () => {
   
@@ -22,16 +26,19 @@ export const Productsdata = () => {
 
     <section className='ml-[25%] flex space-x-[1rem]'>
     <div className='border h-[3rem] p-[0.5rem]'>
+
    < MenuOutlinedIcon fontSize="large"  />
     </div>
     <div className='flex h-[3rem] w-[50%] border border-yellow-900 mb-[1rem]'>
       <input className='w-[100%] h-[100%] text-center' placeholder='search products' onChange={(e)=>setQuery(e.target.value)} />
 
+
     </div>
+     
     </section>
 
 
-    <div className=" flex justify-between mt-[1rem] mb-[1rem] pl-[8rem] pr-[8rem]">
+    <div className=" flex justify-between mt-[1rem] mb-[1rem] pl-[8rem] pr-[8rem] ">
             <button className=' btn-primary w-[5rem] ml-[2rem]' onClick={() => setData(Categories)}>All</button><br />
             <button className=' btn-primary  w-[5rem] ml-[2rem]' onClick={() => filterItems('Men')}>Men</button><br />
             <button className=' btn-primary  w-[5rem] ml-[2rem]' onClick={() => filterItems('women')}>Women</button><br />
@@ -42,12 +49,13 @@ export const Productsdata = () => {
             <button className=' btn-primary  w-[5rem] ml-[2rem]' onClick={() => filterItems('Sportswear')}>Sports </button><br />
           </div>
         
-      <div className='p-[8rem]'>
+      <div className=''>
         <div className=" flex ">
           
 
-          <div className="">
+          <div className="mt-[1rem]">
           
+
             <div className=" flex justify-between flex-wrap ">
             {Categories.filter((data)=>
          data.category.toLowerCase().includes(query)
@@ -61,6 +69,8 @@ export const Productsdata = () => {
                     <div className="   " key={Id}>
                       <div className="" key={Id}>
                         <div className="rounded border shadow-md hover:scale-105 transition-transform duration-300 ease-in-out ml-10 mb-20 p-1" key={Id}>
+
+           
                           <div className='w-[15rem] h-[15rem]'>
                           <img  className='w-[100%] h-[100%] object-cover' src={image} />
                           </div>
