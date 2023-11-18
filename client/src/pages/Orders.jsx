@@ -3,7 +3,7 @@ import Categories from '../Components/Product/Categories'
 import { ShopContext } from '../Context/Cart-context'
 import { CartItemsComponent } from '../Components/Cart/CartItemsComponent'
 
-export const Orders = () => {
+ const Orders = () => {
   const {cartItems}=useContext(ShopContext)
   return (
     <div>
@@ -32,3 +32,4 @@ export const Orders = () => {
 
 
 
+export default Orders
