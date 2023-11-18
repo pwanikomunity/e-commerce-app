@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from '../components/header'
 import Couresel from '../components/Couresel'
+import Footer from '../components/home/Footer'
+import Content from '../components/home/Content'
 
 export default function () {
   return (
@@ -8,6 +10,8 @@ export default function () {
         <Header />
         
         <Couresel />
+        <Content />
+        <Footer />
 
     </div>
   )
