@@ -32,7 +32,7 @@ export default function Navbar() {
 
     <div className="">
       <div className="">
-        <h1>Our Catagories</h1>
+        
         <ul className="h-[50vh] w-[15rem] ml-[-13.3rem] bg-white shadow-2xl fixed  flex flex-col space-y-[1rem] mt-[5.5rem] ">
           {navLinks.slice(0, -1).map((item) => {
             return (

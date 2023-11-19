@@ -12,7 +12,7 @@ export default function Header() {
   const [showModal, setShowModal] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const handleClick = () => {
-    setShowMenu(true);
+    setShowMenu(current=>!current);
   };
   const handleAccountClick = () => {
     setShowModal(current => !current);
@@ -44,12 +44,12 @@ export default function Header() {
 
        <div onClick={handleAccountClick}><h1 className="text-center p-2 hover:text-yellow-500 hover:cursor-pointer">Account</h1></div> 
        {showModal && createPortal(<Modal />,document.body)}
-        <h1 className="text-center p-2">Help?</h1>
-        <div className="flex p-2" onClick={handleCartItems}>
-          <h1 className="text-center ">
+        <h1 className="text-center p-2 hover:text-yellow-500 hover:cursor-pointer">Help?</h1>
+        <div className="flex p-2 hover:cursor-pointer hover:text-yellow-500" onClick={handleCartItems}>
+          <h1 className="text-center text-yellow-900 ">
             <ShoppingCart />
           </h1>
-          <h1 className="text-center ">Cart</h1>
+          <h1 className="text-center hover:text-yellow-500 ">Cart</h1>
         </div>
       </section>
     </div>
