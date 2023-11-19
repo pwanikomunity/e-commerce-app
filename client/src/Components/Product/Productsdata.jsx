@@ -5,8 +5,15 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { ShopContext } from "../../Context/Cart-context";
 import { useNavigate } from "react-router-dom";
+import { createPortal } from "react-dom";
+import ShoppingCart from "@mui/icons-material/ShoppingCart";
+import Footer from "../home/Footer";
 
 export const Productsdata = () => {
+  const [showModal, setShowModal] = useState(false);
+  const handleAccountClick = () => {
+    setShowModal((current) => !current);
+  };
   const [query, setQuery] = useState("");
   const [data, setData] = useState(Categories);
   const navigate = useNavigate();
@@ -22,7 +29,10 @@ export const Productsdata = () => {
   };
   return (
     <>
-      <section className="ml-[25%] flex space-x-[1rem]">
+      <section className=" flex space-x-[1rem] bg-white pt-4 w-[100%]">
+        <div className="items-center ml-[0.5rem] ">
+          <h1 className="text-center p-3">E-Commerce-Sell/Buy</h1>
+        </div>
         <div className="border h-[3rem] p-[0.5rem]">
           <MenuOutlinedIcon fontSize="large" />
         </div>
@@ -33,60 +43,82 @@ export const Productsdata = () => {
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
+        <div className="ml-[1rem] ">
+          <button className="btn-primary h-[3rem] w-[5rem]">search</button>
+        </div>
+
+        <div onClick={handleAccountClick}>
+          <h1 className="ml-[1rem] text-center p-3 hover:text-yellow-500 hover:cursor-pointer">
+            Account
+          </h1>
+        </div>
+        {showModal && createPortal(<Modal />, document.body)}
+        <h1 className="h-[3rem] text-center p-3 hover:text-yellow-500 hover:cursor-pointer ml-[1rem]">
+          Help?
+        </h1>
+        <div
+          className="flex p-3 hover:cursor-pointer hover:text-yellow-500 ml-[1rem] h-[3rem]"
+          onClick={handleCartItems}
+        >
+          <h1 className="text-center text-yellow-900 ">
+            <ShoppingCart />
+          </h1>
+          <h1 className="text-center hover:text-yellow-500 ">Cart</h1>
+        </div>
       </section>
 
-      <div className=" flex justify-between mt-[1rem] mb-[1rem] pl-[8rem] pr-[8rem] ">
+      <div className=" flex justify-between mt-[2rem] mb-[1rem]   ">
         <button
-          className=" btn-primary w-[5rem] ml-[2rem]"
+          className=" btn-primary w-[5rem] "
           onClick={() => setData(Categories)}
         >
           All
         </button>
         <br />
         <button
-          className=" btn-primary  w-[5rem] ml-[2rem]"
+          className=" btn-primary  w-[5rem] "
           onClick={() => filterItems("Men")}
         >
           Men
         </button>
         <br />
         <button
-          className=" btn-primary  w-[5rem] ml-[2rem]"
+          className=" btn-primary  w-[5rem] "
           onClick={() => filterItems("women")}
         >
           Women
         </button>
         <br />
         <button
-          className=" btn-primary  w-[5rem] ml-[2rem]"
+          className=" btn-primary  w-[5rem] "
           onClick={() => filterItems("children")}
         >
           Children
         </button>
         <br />
         <button
-          className=" btn-primary   w-[5rem] ml-[2rem]"
+          className=" btn-primary   w-[5rem] "
           onClick={() => filterItems("Phones")}
         >
           Phones
         </button>
         <br />
         <button
-          className=" btn-primary   w-[5rem] ml-[2rem]"
+          className=" btn-primary   w-[5rem] "
           onClick={() => filterItems("shoes")}
         >
           Shoes
         </button>
         <br />
         <button
-          className=" btn-primary  w-[5rem] ml-[2rem]"
+          className=" btn-primary  w-[5rem] "
           onClick={() => filterItems("Computers")}
         >
           Computers
         </button>
         <br />
         <button
-          className=" btn-primary  w-[5rem] ml-[2rem]"
+          className=" btn-primary  w-[5rem] "
           onClick={() => filterItems("Sportswear")}
         >
           Sports{" "}
@@ -97,7 +129,7 @@ export const Productsdata = () => {
       <div className="">
         <div className=" flex ">
           <div className="mt-[1rem]">
-            <div className=" flex justify-between flex-wrap ">
+            <div className=" flex justify-between flex-wrap  bg-white pt-[1rem]">
               {Categories.filter((data) =>
                 data.category.toLowerCase().includes(query)
               ).map((values) => {
@@ -145,6 +177,7 @@ export const Productsdata = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

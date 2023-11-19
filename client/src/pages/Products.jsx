@@ -5,7 +5,7 @@ import { Productsdata } from '../components/Product/Productsdata'
 
 export default function Products() {
   return (
-    <div>  <input placeholder='search products'/>
+    <div className='bg-gray-900 p-[2rem] '>  
     <Productsdata />
     </div>
     
