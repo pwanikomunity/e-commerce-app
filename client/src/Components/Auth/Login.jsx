@@ -9,8 +9,10 @@ import {
 
 import { auth, googleProvider } from "./Firebase.jsx";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -60,6 +62,10 @@ export const Login = () => {
   const logout = async () => {
     await signOut(auth);
   };
+  const handleContinueClick = ()=>{
+    console.log('clicked')
+    navigate('/products')
+  }
 
   return (
     <div className="">
@@ -122,7 +128,7 @@ export const Login = () => {
           </div>
           <div className="w-[100%] h-[3rem] mt-[1rem]">
             {" "}
-            <button onClick={login} className="btn-primary shadow">
+            <button onClick={handleContinueClick} className="btn-primary shadow">
               {" "}
               Continue
             </button>

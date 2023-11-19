@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const navLinks = [
   {
     title: "Our Categories",
-    path: "products",
+    path: "/products",
   },
   {
     title: "Fashion",
