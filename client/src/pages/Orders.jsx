@@ -3,6 +3,7 @@ import Categories from '../Components/Product/Categories'
 import { ShopContext } from '../Context/Cart-context'
 import { CartItemsComponent } from '../Components/Cart/CartItemsComponent'
 import Header from '../components/header'
+import Footer from '../components/home/Footer'
 
  const Orders = () => {
   const {cartItems}=useContext(ShopContext)
@@ -28,6 +29,10 @@ import Header from '../components/header'
         <p>TOTAL  </p>
         <button>Checkout</button>
       </div>
+      <section className='bg-gray-900'>
+      <Footer />
+      </section>
+      
       
     </div>
   )
