@@ -59,17 +59,19 @@ export const CartContextProvider = (props) => {
     });
   };
   
-  const getTotalAmount=()=>{
-    let totalAmount=0;
-    for(const item in cartItems){
-      if (cartItems[item]>0){
-        let itemInfo= Categories.find((product)=>product.Id===Number(item));
-        totalAmount+=cartItems[item]* itemInfo.price
-      }
-      return totalAmount
+  const getTotalAmount = () => {
+    let totalAmount = 0;
+    
+    for (const item in cartItems) {
+        if (cartItems[item] > 0) {
+            let itemInfo = Categories.find((product) => product.Id === Number(item));
+            totalAmount += cartItems[item] * itemInfo.price;
+        }
     }
-    // return totalAmount
-  }
+
+    return totalAmount;
+}
+
   
   console.log(cartItems)
   const contextValue={cartItems,addToCart,removeFromCart, updateCartItemCount,getTotalAmount}
