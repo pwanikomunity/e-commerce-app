@@ -6,7 +6,9 @@ import Header from '../components/header'
 import Footer from '../components/home/Footer'
 
  const Orders = () => {
-  const {cartItems}=useContext(ShopContext)
+  const {cartItems,getTotalAmount}=useContext(ShopContext)
+  const total=getTotalAmount();
+  
   return (
     <div >
       <div className='bg-gray-900 pt-[1rem] pb-[2rem]'>
@@ -24,10 +26,10 @@ import Footer from '../components/home/Footer'
         })};
       </div>
        
-      <div className="checkout">
+      <div className="ml-40">
        
-        <p>TOTAL  </p>
-        <button>Checkout</button>
+        <p>TOTAL: ksh.{total}  </p>
+        <button className='btn-primary w-[15rem]'>Checkout</button>
       </div>
       <section className='bg-gray-900'>
       <Footer />
