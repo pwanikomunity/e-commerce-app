@@ -129,7 +129,7 @@ export const Productsdata = () => {
       <div className="">
         <div className=" flex ">
           <div className="mt-[1rem]">
-            <div className=" flex justify-between flex-wrap  bg-white pt-[1rem]">
+            <div className=" flex justify-between flex-wrap  bg-white p-[1rem]">
               {Categories.filter((data) =>
                 data.category.toLowerCase().includes(query)
               ).map((values) => {
@@ -141,7 +141,7 @@ export const Productsdata = () => {
                   <div className="   " key={Id}>
                     <div className="" key={Id}>
                       <div
-                        className="rounded border shadow-md hover:scale-105 transition-transform duration-300 ease-in-out ml-10 mb-20 p-1"
+                        className="rounded  shadow-md hover:scale-105 transition-transform duration-300 ease-in-out  mb-[1rem] "
                         key={Id}
                       >
                         <div className="w-[15rem] h-[15rem]">
