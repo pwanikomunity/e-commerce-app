@@ -23,8 +23,8 @@ export default function Header() {
   }
   return (
     <div className="flex  w-[90%] mt-[1rem] bg-white  mx-auto onClick={handleClick} pt-3">
-      <div className="items-center ">
-        <h1 className="text-center p-2">E-Commerce-Sell/Buy</h1>
+      <div className="items-center ml-[0.5rem] ">
+        <h1 className="text-center p-3">E-Commerce-Sell/Buy</h1>
       </div>
 
       <section className="ml-[2rem] flex">
@@ -38,14 +38,14 @@ export default function Header() {
             placeholder="search products"
           />
         </div>
-        <div className="ml-[1rem]">
+        <div className="ml-[1rem] ">
           <button className="btn-primary h-[3rem] w-[5rem]">search</button>
         </div>
 
-       <div onClick={handleAccountClick}><h1 className="text-center p-2 hover:text-yellow-500 hover:cursor-pointer">Account</h1></div> 
+       <div onClick={handleAccountClick}><h1 className="ml-[1rem] text-center p-3 hover:text-yellow-500 hover:cursor-pointer">Account</h1></div> 
        {showModal && createPortal(<Modal />,document.body)}
-        <h1 className="text-center p-2 hover:text-yellow-500 hover:cursor-pointer">Help?</h1>
-        <div className="flex p-2 hover:cursor-pointer hover:text-yellow-500" onClick={handleCartItems}>
+        <h1 className="h-[3rem] text-center p-3 hover:text-yellow-500 hover:cursor-pointer ml-[1rem]">Help?</h1>
+        <div className="flex p-3 hover:cursor-pointer hover:text-yellow-500 ml-[1rem] h-[3rem]" onClick={handleCartItems}>
           <h1 className="text-center text-yellow-900 ">
             <ShoppingCart />
           </h1>
