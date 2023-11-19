@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ShoppingCart from "@mui/icons-material/ShoppingCart";
+import Modal from "./account/Modal";
+import { createPortal } from 'react-dom';
 
 export default function Header() {
   const navigate = useNavigate();
@@ -13,8 +15,8 @@ export default function Header() {
     setShowMenu(true);
   };
   const handleAccountClick = () => {
-    setShowModal(true);
-    navigate("/account");
+    setShowModal(current => !current);
+    
   };
   const handleCartItems = ()=>{
     navigate('/orders')
@@ -40,7 +42,8 @@ export default function Header() {
           <button className="btn-primary h-[3rem] w-[5rem]">search</button>
         </div>
 
-        <h1 className="text-center p-2 ">Account</h1>
+       <div onClick={handleAccountClick}><h1 className="text-center p-2 hover:text-yellow-500 hover:cursor-pointer">Account</h1></div> 
+       {showModal && createPortal(<Modal />,document.body)}
         <h1 className="text-center p-2">Help?</h1>
         <div className="flex p-2" onClick={handleCartItems}>
           <h1 className="text-center ">
