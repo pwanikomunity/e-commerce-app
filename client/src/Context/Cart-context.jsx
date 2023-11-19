@@ -10,9 +10,6 @@ const getDefaultCart=()=>{
   }
   return cart;
 }
-
-
-
 export const CartContextProvider = (props) => {
   const[cartItems,setCartItems]=useState( getDefaultCart)
 

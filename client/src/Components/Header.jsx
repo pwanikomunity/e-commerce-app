@@ -26,7 +26,7 @@ export default function Header() {
       </div>
 
       <section className="ml-[2rem] flex">
-        <div className="border h-[3rem] p-2 mr-[1rem]">
+        <div className="border h-[3rem] p-2 mr-[1rem]" onClick={handleClick}>
           {showMenu ? <Navbar /> : <MenuOutlinedIcon fontSize="large" />}
         </div>
 
