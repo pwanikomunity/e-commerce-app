@@ -106,10 +106,10 @@ export const Productsdata = () => {
                 const { addToCart, cartItems } = useContext(ShopContext);
                 const cartItemsAmout = cartItems[Id];
                 return (
-                  <div className="   " key={Id}>
+                  <div className="   pl-5 pr-5" key={Id}>
                     <div className="" key={Id}>
                       <div
-                        className="rounded border shadow-md hover:scale-105 transition-transform duration-300 ease-in-out ml-10 mb-20 p-1"
+                        className="rounded border shadow-md hover:scale-105 transition-transform duration-300 ease-in-out ml-2 mb-20 p-1"
                         key={Id}
                       >
                         <div className="w-[15rem] h-[15rem]">
@@ -134,7 +134,7 @@ export const Productsdata = () => {
                             <h1 className="text-center ">
                               <ShoppingCartIcon />
                             </h1>
-                            <h1 className="text-center ">Cart</h1>
+                            {/* <h1 className="text-center ">Cart</h1> */}
                           </div>
                         </div>
                       </div>

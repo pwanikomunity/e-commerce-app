@@ -13,52 +13,41 @@ const getDefaultCart=()=>{
 export const CartContextProvider = (props) => {
   const[cartItems,setCartItems]=useState( getDefaultCart)
 
-  // const addToCart=(itemId)=>{
-  //   setCartItems((prev)=>({...prev, [itemId]: prev[itemId] +1 }));
-
-  // }
   const addToCart = (itemId) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
-      
-      // If the item is already in the cart, increment the quantity
-      // If not, add the item to the cart with quantity 1
+ 
       updatedCart[itemId] = (updatedCart[itemId] || 0) + 1;
   
       return updatedCart;
     });
   };
   
-  // const removeFromCart=(itemId)=>{
-  //   setCartItems((prev)=>({...prev, [itemId]: prev[itemId]-1}));
-
-  // }
+ 
   const removeFromCart = (itemId) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
-      
-      // If the item is already in the cart, increment the quantity
-      // If not, add the item to the cart with quantity 1
+    
       updatedCart[itemId] = (updatedCart[itemId] || 0) -1;
   
       return updatedCart;
     });
   };
   
-  // const updateCartItemCount=(newAmount,itemId)=>{
-  //   setCartItems((prev)=({...prev, [itemId]: newAmount}));
-  // }
+
   const updateCartItemCount = (newAmount, itemId) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev };
   
-      // If the item is not in the cart, add it with the new quantity
       updatedCart[itemId] = newAmount;
   
       return updatedCart;
     });
   };
-  
+  const clearCart = () => {
+    setCartItems(getDefaultCart());
+}
+
   const getTotalAmount = () => {
     let totalAmount = 0;
     
@@ -74,7 +63,7 @@ export const CartContextProvider = (props) => {
 
   
   console.log(cartItems)
-  const contextValue={cartItems,addToCart,removeFromCart, updateCartItemCount,getTotalAmount}
+  const contextValue={cartItems,addToCart,removeFromCart, updateCartItemCount,getTotalAmount, clearCart}
   return (
     <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
   )
