@@ -7,7 +7,7 @@ const Categories=[
         price:2000,
         about:"white shirt,100% cotton",
         category:"women",
-        image:"/assets/women2.jpeg"
+        image:"/assets/caneva watch.png"
  
      },
      {
@@ -16,7 +16,7 @@ const Categories=[
         price:2000,
         about:"white shirt,100% cotton",
         category:"women",
-        image:"/assets/women1.jpeg"
+        image:"/assets/SML_REBELLIONAIRE_JORDAN_1_FB_900x.webp"
  
      },
      {
@@ -25,7 +25,7 @@ const Categories=[
         price:2000,
         about:"Original jersey",
         category:"Sportswear",
-        image:"/assets/sports1.jpeg"
+        image:"/assets/iPhone-15 (1).jpg"
  
      },
      {
@@ -41,45 +41,45 @@ const Categories=[
       Id:6,
       title:"Jersey",
       price:2000,
-      about:"Original jersey",
-      category:"Sportswear",
-      image:"/assets/sports3.jpeg"
+      about:"Hp Probook-450-8G-Core",
+      category:"electronis",
+      image:"/assets/Hp-Probook-450-G8-Core-i51165G7-8GB-512-SSD-15.6-Dos-500x500.webp"
 
    },
      {
       Id:7,
       title:"Jersey",
       price:2000,
-      about:"Dresses",
-      category:"women",
-      image:"/assets/women2.jpeg"
+      about:"FOG Essential Hoodie",
+      category:"men",
+      image:"/assets/FOG ESSENTIAL HOODIE.webp"
 
    },
    {
       Id:8,
       title:"Shoes",
       price:4000,
-      about:"Original jersey",
-      category:"shoes",
-      image:"/assets/shoes1.jpeg"
+      about:"FOG Essential T-shirt",
+      category:"men",
+      image:"/assets/FOG ESSENTIAL TSHIRT.webp"
 
    },
    {
       Id:9,
       title:"Shoes",
       price:4000,
-      about:"Original jersey",
-      category:"shoes",
-      image:"/assets/shoes2.jpeg"
+      about:"FOG Essential Kids",
+      category:"men",
+      image:"/assets/FOG ESSENTIAL KIDS.webp"
 
    },
    {
       Id:10,
       title:"Shoes",
       price:4000,
-      about:"Original jersey",
+      about:"Fashion Men Dress Shirt Long Sleeve",
       category:"shoes",
-      image:"/assets/shoes4.jpeg"
+      image:"/assets/fashion men dress shirt long sleeve.jpg"
 
    },
    {
@@ -87,17 +87,17 @@ const Categories=[
       title:"Shoes",
       price:4000,
       about:"Original jersey",
-      category:"shoes",
-      image:"/assets/shoes4.jpeg"
+      category:"Fashion 2 Pieces Men's T-shirt",
+      image:"/assets/fashion 2 pieces men's t-shirt.jpg"
 
    },
    {
       Id:12,
       title:"Shoes",
       price:4000,
-      about:"Original jersey",
+      about:"Black Men Cargo Pants",
       category:"Men",
-      image:"/assets/men1.jpeg"
+      image:"/assets/fashion men cargo pants.jpg"
 
    },
    {
@@ -221,7 +221,7 @@ const Categories=[
       Id:23,
       title:"SML-REBELLIONAIRE_JORDAN_1",
       price:4500,
-      about:"Dark sml-rebellionaire J1",
+      about:"Dark sml-rebellionaire J1-",
       category:"shoes",
       image:"/assets/SML_REBELLIONAIRE_JORDAN_1_FB_900x.webp"
 
